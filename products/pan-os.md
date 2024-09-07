@@ -13,7 +13,10 @@ eolColumn: End-of-life Date
 
 auto:
   methods:
-  -   custom: pan-os
+  # https://github.com/endoflife-date/release-data/blob/main/src/pan-os.py works great, but the latest.py script does not
+  # compute the latest version accurately, and the link is not updated too. So we better disable this for now. 
+  # See https://github.com/endoflife-date/endoflife.date/issues/5775.
+  #-   custom: pan-os
   -   release_table: https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary
       selector: "table#pan-os-panorama"
       header_selector: "tr:nth-of-type(3)"
@@ -29,9 +32,9 @@ releases:
 -   releaseCycle: "11.2"
     releaseDate: 2024-05-02
     eol: 2027-05-02
-    latest: "11.2.2-h1"
-    latestReleaseDate: 2024-08-02
-    link: https://docs.paloaltonetworks.com/pan-os/11-2/pan-os-release-notes/pan-os-11-2-2-known-and-addressed-issues/pan-os-11-2-2-h1-addressed-issues
+    latest: "11.2.3"
+    latestReleaseDate: 2024-09-05
+    link: https://docs.paloaltonetworks.com/pan-os/11-2/pan-os-release-notes/pan-os-11-2-3-known-and-addressed-issues/pan-os-11-2-3-addressed-issues
 
 -   releaseCycle: "11.1"
     releaseDate: 2023-11-03
@@ -50,9 +53,9 @@ releases:
 -   releaseCycle: "10.2"
     releaseDate: 2022-02-27
     eol: 2026-02-28
-    latest: "10.2.10-h4"
-    latestReleaseDate: 2024-08-28
-    link: https://docs.paloaltonetworks.com/pan-os/10-2/pan-os-release-notes/pan-os-10-2-11-known-and-addressed-issues/pan-os-10-2-11-addressed-issues
+    latest: "10.2.11-h1"
+    latestReleaseDate: 2024-08-29
+    link: https://docs.paloaltonetworks.com/pan-os/10-2/pan-os-release-notes/pan-os-10-2-11-known-and-addressed-issues/pan-os-10-2-11-h1-addressed-issues
 
 -   releaseCycle: "10.1"
     releaseDate: 2021-05-31
@@ -175,20 +178,6 @@ releases:
     releaseDate: 2007-11-15
     eol: 2008-11-20
     latest: ""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
